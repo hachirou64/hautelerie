@@ -138,10 +138,6 @@ export default function HomePage() {
         demandes_speciales: '',
         date_arrivee: '',
         date_depart: '',
-        ville: '',
-        demandes_speciales: '',
-        date_arrivee: '',
-        date_depart: '',
         nombre_personnes: 2,
       });
       setContactForm({
@@ -883,6 +879,15 @@ export default function HomePage() {
                         ) : (
                           'Envoyer'
                         )}
+                      </button>
+                    </div>
+                  </form>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       <footer className="bg-gray-950 text-white py-20 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

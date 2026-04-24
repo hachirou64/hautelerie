@@ -1,1 +1,0 @@
-- [x] 1. Identifier et corriger virgules traînantes / quotes dans JSX (footer/modals) - Prettier appliqué\n- [x] 2. Remplacer apostrophes courbes par droits - OK\n- [x] 3. Vérifier balises auto-fermantes - OK\n- [x] 4. Exécuter npm run dev et vérifier erreur disparue - Vite OK port 5174\n- [x] 5. Tester page en browser\n**Tâche terminée ! Erreur syntaxe corrigée.**\n

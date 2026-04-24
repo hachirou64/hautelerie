@@ -6,12 +6,16 @@ use App\Http\Controllers\Dashboard\ClientDashboardController;
 use App\Http\Controllers\Dashboard\AdminDashboardController;
 
 Route::get('/', function () {
-    return Inertia::render('welcome');
+    return Inertia::render('welcome_old');
 })->name('home');
 
 Route::get('/chambres', function () {
     return Inertia::render('chambres');
 })->name('chambres');
+
+Route::get('/chambres/{id}', function ($id) {
+    return Inertia::render('chambre-detail', ['id' => $id]);
+})->name('chambres.show');
 
 Route::middleware(['auth'])->group(function () {
     // Client Dashboard routes

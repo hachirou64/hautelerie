@@ -243,7 +243,7 @@ export default function PublicChambresPage() {
                     <span className="text-gray-500 text-lg">par nuit</span>
                   </div>
                   <Link 
-                    href="#"
+                    href={`/chambres/${chambre.id}`}
                     className="bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-bold py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all flex items-center space-x-3 group-hover:translate-x-2"
                   >
                     <span>Réserver</span>
