@@ -4,10 +4,16 @@ import { AppSidebar } from '@/components/app-sidebar';
 import { AppSidebarHeader } from '@/components/app-sidebar-header';
 import { type BreadcrumbItem } from '@/types';
 
-export default function AppSidebarLayout({ children, breadcrumbs = [] }: { children: React.ReactNode; breadcrumbs?: BreadcrumbItem[] }) {
+interface AppSidebarLayoutProps {
+    children: React.ReactNode;
+    breadcrumbs?: BreadcrumbItem[];
+    role?: 'admin' | 'client';
+}
+
+export default function AppSidebarLayout({ children, breadcrumbs = [], role = 'client' }: AppSidebarLayoutProps) {
     return (
         <AppShell variant="sidebar">
-            <AppSidebar />
+            <AppSidebar role={role} />
             <AppContent variant="sidebar">
                 <AppSidebarHeader breadcrumbs={breadcrumbs} />
                 {children}

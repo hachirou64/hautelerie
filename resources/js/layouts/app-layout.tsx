@@ -4,10 +4,11 @@ import { type BreadcrumbItem } from '@/types';
 interface AppLayoutProps {
     children: React.ReactNode;
     breadcrumbs?: BreadcrumbItem[];
+    role?: 'admin' | 'client';
 }
 
-export default ({ children, breadcrumbs, ...props }: AppLayoutProps) => (
-    <AppLayoutTemplate breadcrumbs={breadcrumbs} {...props}>
+export default ({ children, breadcrumbs, role = 'client', ...props }: AppLayoutProps) => (
+    <AppLayoutTemplate breadcrumbs={breadcrumbs} role={role} {...props}>
         {children}
     </AppLayoutTemplate>
 );

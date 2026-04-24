@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');                    // Service name
+            $table->text('description')->nullable(); // Service description
+            $table->decimal('prix', 10, 2)->nullable(); // Price (if applicable)
+            $table->string('categorie');             // restaurant, spa, transport, etc.
+            $table->string('image')->nullable();     // Service image
+            $table->boolean('actif')->default(true);
             $table->timestamps();
         });
     }
@@ -25,3 +31,4 @@ return new class extends Migration
         Schema::dropIfExists('services');
     }
 };
+

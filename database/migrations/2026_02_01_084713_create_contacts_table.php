@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->string('email');
+            $table->string('telephone')->nullable();
+            $table->string('sujet')->nullable();
+            $table->text('message');
+            $table->enum('statut', ['non_lu', 'lu', 'repondu'])
+                  ->default('non_lu');
             $table->timestamps();
         });
     }
@@ -25,3 +32,4 @@ return new class extends Migration
         Schema::dropIfExists('contacts');
     }
 };
+
